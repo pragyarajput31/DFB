@@ -151,4 +151,8 @@ The application includes testing for:
 -Form validation and submission.
 -Responsiveness and real-time updates.
 
+## Deployment
+https://dfb-4gjd12f3e-pragya-rajput-s-projects.vercel.app/ 
+deployed it on vercel 
+
 
