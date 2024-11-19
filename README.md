@@ -1,6 +1,6 @@
 ## Dynamic Form Generator
 ## Description
-The Dynamic Form Generator is a React-based application that dynamically generates forms based on a provided JSON schema. The application features a split-screen interface where users can edit the schema in real-time on one side and see the generated form on the other. It is designed with responsiveness, validation, and user experience in mind.
+The Dynamic Form Generator is a React application that creates forms dynamically based on a given JSON schema. It features a dual-pane interface, allowing users to edit the schema on one side and instantly view the corresponding form on the other. The application prioritizes responsiveness, form validation, and an intuitive user experience.
 
 ## Setup Instructions
 1. Clone the repository.
@@ -8,23 +8,50 @@ The Dynamic Form Generator is a React-based application that dynamically generat
 3. Start the development server
 
 ## Example JSON Schema
-Refer to the `sample-schema.json` file for an example.
- {
-        id: "name",
-        type: "text",
-        label: "Full Name",
-        required: true,
-        placeholder: "Enter your full name"
-      },
-      {
-        id: "email",
-        type: "email",
-        label: "Email Address",
-        required: true,
-        placeholder: "you@example.com"
+{
+
+  "formTitle": "Project Requirements Survey",
+
+  "formDescription": "Please fill out this survey about your project needs",
+
+  "fields": [
+
+    {
+
+      "id": "name",
+
+      "type": "text",
+
+      "label": "Full Name",
+
+      "required": true,
+
+      "placeholder": "Enter your full name"
+
+    },
+
+    {
+
+      "id": "email",
+
+      "type": "email",
+
+      "label": "Email Address",
+
+      "required": true,
+
+      "placeholder": "you@example.com",
+
+      "validation": {
+
+        "pattern": "^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$",
+
+        "message": "Please enter a valid email address"
+
       }
-    ]
-  }, null, 2));
+      ]
+
+    }
 
 ## Testing
 The application includes testing for:
@@ -32,6 +59,4 @@ The application includes testing for:
 -Form validation and submission.
 -Responsiveness and real-time updates.
 
-## Deployment
-The application is deployed on Netlify:
-https://dynamic-form-generator675.netlify.app/
+
